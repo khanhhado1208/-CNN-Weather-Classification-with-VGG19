@@ -15,11 +15,17 @@ In this exercise, we use the VGG19 model with transfer learning to identify 4 ty
 
 ### Dataset
 Source: Multi-class Weather Dataset [https://www.kaggle.com/datasets/pratik2901/multiclass-weather-dataset]
+
 Number of photos: 1125 photos in 4 classes
+
 Image size: 224x224 pixels
+
 Preprocessing:
+
 Normalize data: Divide pixel value by 255
+
 One-hot encoding for labels
+
 Split the data set: 70% training, 30% validation
 
 ### Results & Reviews
