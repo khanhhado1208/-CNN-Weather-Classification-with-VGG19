@@ -37,32 +37,6 @@ Split the data set: 70% training, 30% validation
 🏗️ Model Architecture
 #### CNN and set all parameters to trainable = True
 
-# Set trainable (True, False)
-isTrainable = True
-
-baseModel = VGG19(input_shape=target_size, weights='imagenet', include_top=False) # Input model use VGG19 use imagenet weight
-
-# Freeze all layers of VGG19
-for layer_ctn, layer in enumerate(baseModel.layers[:]):
-    layer.trainable = isTrainable
-    
-# Flatten layer to convert from 4D tensor -> 1D vector
-x = Flatten()(baseModel.output)
-
-# Fully Connected Layers (Dense + Dropout)
-x = Dense(512, activation='relu', kernel_regularizer=l1_l2(l1=0, l2=0.01))(x) # Add a Dense layer with 512 units
-x = Dropout(0.1)(x) # Dropout layer with 0.1 unit
-x = Dense(256, activation='relu', kernel_regularizer=l1_l2(l1=0, l2=0.01))(x) # Add a Dense layer with 256 units
-x = Dropout(0.1)(x) # Dropout layer with 0.1 unit
-
-# Output layer with 4 classes for the final classifier 
-x = Dense(4, activation='softmax')(x)  # 4 classes: ['Cloudy', 'Rain', 'Shine', 'Sunrise']
-
-# Combine base_model and Fully Connected layers into a final model
-model = Model(inputs=baseModel.input, outputs=x)
-
-model.summary() # Print mode summary
-
 <img width="248" alt="image" src="https://github.com/user-attachments/assets/295ad89f-6828-44d4-bfa0-bb4e9e87df38" />
 
 #### Train vs Validation Accuracy
@@ -77,32 +51,6 @@ model.summary() # Print mode summary
 + Loss reduction: There are no large fluctuations; providing that training is stable
 
 #### CNN and set all parameters to trainable = False
-
-# Set trainable (True, False)
-isTrainable = False
-
-baseModel = VGG19(input_shape=target_size, weights='imagenet', include_top=False) # Input model use VGG19 use imagenet weight
-
-# Freeze all layers of VGG19
-for layer_ctn, layer in enumerate(baseModel.layers[:]):
-    layer.trainable = isTrainable
-    
-# Flatten layer to convert from 4D tensor -> 1D vector
-x = Flatten()(baseModel.output)
-
-# Fully Connected Layers (Dense + Dropout)
-x = Dense(512, activation='relu', kernel_regularizer=l1_l2(l1=0, l2=0.01))(x) # Add a Dense layer with 512 units
-x = Dropout(0.1)(x) # Dropout layer with 0.1 unit
-x = Dense(256, activation='relu', kernel_regularizer=l1_l2(l1=0, l2=0.01))(x) # Add a Dense layer with 256 units
-x = Dropout(0.1)(x) # Dropout layer with 0.1 unit
-
-# Output layer with 4 classes for the final classifier 
-x = Dense(4, activation='softmax')(x)  # 4 classes: ['Cloudy', 'Rain', 'Shine', 'Sunrise']
-
-# Combine base_model and Fully Connected layers into a final model
-model = Model(inputs=baseModel.input, outputs=x)
-
-model.summary() # Print mode summary
 
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/26d23ade-98b9-4403-a7f9-1fd9a36562f9" />
 
