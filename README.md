@@ -157,3 +157,4 @@ Freezing earlier layers prevents weight overwriting and improves test accuracy.
 | Trainable = True  | When there is a large data set, it helps the model learn more optimally. Needs a more powerful GPU to train. |  
 | Trainable = False | When the dataset is small, avoid overfitting but may suffer from underfitting. Train faster.                 |   
 
+### 📌[Project Documentation](http://ha-robo.com/blog/5)
