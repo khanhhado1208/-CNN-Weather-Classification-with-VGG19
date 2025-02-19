@@ -37,7 +37,10 @@ Split the data set: 70% training, 30% validation
 🏗️ Model Architecture
 #### CNN and set all parameters to trainable = True
 
-<img width="248" alt="image" src="https://github.com/user-attachments/assets/295ad89f-6828-44d4-bfa0-bb4e9e87df38" />
+<img width="319" alt="image" src="https://github.com/user-attachments/assets/97e8fe37-8c19-41b5-9e5a-359413df0fa7" />
+
+<img width="284" alt="image" src="https://github.com/user-attachments/assets/664c287b-b0e7-4452-a4b3-cccd18c7656a" />
+
 
 #### Train vs Validation Accuracy
 + Trend: Accuracy increases gradually with the number of epochs
@@ -52,8 +55,9 @@ Split the data set: 70% training, 30% validation
 
 #### CNN and set all parameters to trainable = False
 
-<img width="250" alt="image" src="https://github.com/user-attachments/assets/26d23ade-98b9-4403-a7f9-1fd9a36562f9" />
+<img width="294" alt="image" src="https://github.com/user-attachments/assets/4d2719e4-2532-414d-a276-c80ea62f5402" />
 
+<img width="281" alt="image" src="https://github.com/user-attachments/assets/742167d3-7c6e-48c9-b092-ecfff4e6a4b4" />
 
 #### Train vs Validation Accuracy
 + Trend: Accuracy increases gradually with the number of epochs
@@ -70,7 +74,7 @@ Split the data set: 70% training, 30% validation
 📊 Model Performance
 #### Confusion Matrix (Trainable = False)
 
-<img width="248" alt="image" src="https://github.com/user-attachments/assets/dc083569-17d8-4f2d-9eea-350e0b82640b" />
+<img width="275" alt="image" src="https://github.com/user-attachments/assets/bf4fd005-9afe-436e-b4e5-c4824e3f6bd1" />
 
 
 | True Label / Predicted label | Cloudy | Rain | Shine | Sunrise |
