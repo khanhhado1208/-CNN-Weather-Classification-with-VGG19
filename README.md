@@ -136,10 +136,11 @@ Split the data set: 70% training, 30% validation
 
 ### Results & Reviews
 
-| Method            | Train Accuracy | Validation Accuracy | Overfitting             |
-|-------------------|----------------|---------------------|-------------------------|
-| Trainable = True  | 98.83%         | 29.59%              | ❌ High Overfitting      |
-| Trainable = False | 95.27%         | 93.49%              | ✅ Better Generalization |
+| Method              | Train Accuracy | Validation Accuracy | Test Accuracy | Evaluation                                                                         |
+|---------------------|----------------|---------------------|---------------|------------------------------------------------------------------------------------|
+| (trainable = True)  | 32%            | 30%                 | 29.59%        | Poor classification performance overall.                                           |
+| (trainable = False) | 90%            | 80%                 | 77.81%        | Good performance in overall, a small sign of overfitting but it is not significant |
+
 
 📌 Key Insight:
 
